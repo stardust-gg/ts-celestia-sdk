@@ -1,6 +1,6 @@
 {
     "name": "@stardust-gg/ts-celestia-sdk",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "description": "Celestia Node TypeScript SDK",
     "main": "dist/src/index.js",
     "repository": {
@@ -8,6 +8,9 @@
         "url": "https://github.com/stardust-gg/ts-celestia-sdk"
     },
     "author": "",
+    "publishConfig": {
+        "access": "public"
+    },
     "license": "MIT",
     "devDependencies": {
         "ts-node": "^10.9.1",
