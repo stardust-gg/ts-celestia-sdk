@@ -25,7 +25,7 @@ npm install https://github.com/ashishbhintade/cntsc.git
 To use this library, you'll first need to initiate your own Celestia node and generate an authentication token. You need node url and the auth token to instantiate the Client. Here is the guide on [how to run the Celestia light node](https://docs.celestia.org/nodes/light-node).
 
 ```ts
-import Client from 'cntsc';
+import Client from 'ts-celestia-sdk';
 
 let client: Client = new Client('YOUR_NODE_URL', 'AUTH_TOKEN');
 
@@ -42,7 +42,3 @@ await client.Blob.GetAll(42, ['AAAAAAAAAAAAAAAAAAAAAAAAAAECAwQFBgcICRA=']);
 - P2P
 - Share
 - State
-
-## Next Steps
-
-Right now, all endpoints are tested manually. However, I want write tests, create more examples for each endpoint along with better explanation and complete the implementation of the remaining types, which are currently substituted with "any".
