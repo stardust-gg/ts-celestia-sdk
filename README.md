@@ -6,18 +6,12 @@ This is a fork of [Celestia Node TypeScript Client](https://github.com/ashishbhi
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Motivation
-
-I decided to work on this project because it was suggested during the Celestia hackathon brainstorming session. In any case, I found it useful for another project I'm working on which is balance tracker for Celestia. Even though finishing that project on time seems unlikely, at least this library is ready to use.
-
-Another reason is that I wanted to try publishing something on NPM to see how it works.
-
 ## Installation
 
 Use following command to use library in your project:
 
 ```bash
-npm install https://github.com/ashishbhintade/cntsc.git
+npm install @stardust-gg/ts-celestial-sdk
 ```
 
 ## Quick Start

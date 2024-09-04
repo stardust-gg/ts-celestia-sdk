@@ -1,6 +1,6 @@
 {
-    "name": "ts-celestia-sdk",
-    "version": "1.0.1",
+    "name": "@stardust-gg/ts-celestia-sdk",
+    "version": "1.0.2",
     "description": "Celestia Node TypeScript SDK",
     "main": "dist/src/index.js",
     "repository": {
