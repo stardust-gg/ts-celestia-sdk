@@ -1,4 +1,4 @@
-import { Client } from "..";
+import Client from '..';
 interface Info {
     type: string;
     api_version: string;

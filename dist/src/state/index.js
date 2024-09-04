@@ -17,21 +17,21 @@ class State {
     }
     AccountAddress() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.AccountAddress", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.AccountAddress', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Balance() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.Balance", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.Balance', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     BalanceForAddress() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.BalanceForAddress", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.BalanceForAddress', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -39,35 +39,35 @@ class State {
     // TODO implement TxResponse Type
     BeginRedelegate(srcValAddr, dstValAddr, amount, fee, gasLimit) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.BeginRedelegate", params: [srcValAddr, dstValAddr, amount, fee, gasLimit] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.BeginRedelegate', params: [srcValAddr, dstValAddr, amount, fee, gasLimit] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     CancelUnbondingDelegation(valAddr, amount, height, fee, gasLimit) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.CancelUnbondingDelegation", params: [valAddr, amount, height, fee, gasLimit] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.CancelUnbondingDelegation', params: [valAddr, amount, height, fee, gasLimit] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Delegate(valAddr, amount, fee, gasLimit) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.Delegate", params: [valAddr, amount, fee, gasLimit] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.Delegate', params: [valAddr, amount, fee, gasLimit] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     QueryDelegation(valAddr) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.QueryDelegation", params: [valAddr] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.QueryDelegation', params: [valAddr] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     QueryRedelegations(srcValAddr, dstValAddr) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.QueryRedelegations", params: [srcValAddr, dstValAddr] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.QueryRedelegations', params: [srcValAddr, dstValAddr] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -75,35 +75,35 @@ class State {
     // TODO implement type for unbonding response
     QueryUnbonding(valAddr) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.QueryUnbonding", params: [valAddr] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.QueryUnbonding', params: [valAddr] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     SubmitPayForBlob(fee, gasLimit, blobs) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.SubmitPayForBlob", params: [fee, gasLimit, blobs] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.SubmitPayForBlob', params: [fee, gasLimit, blobs] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     SubmitTx(tx) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.SubmitTx", params: [tx] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.SubmitTx', params: [tx] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Transfer(to, amount, fee, gasLimit) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.Transfer", params: [to, amount, fee, gasLimit] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.Transfer', params: [to, amount, fee, gasLimit] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Undelegate(valAddr, amount, fee, gasLimit) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "state.Undelegate", params: [valAddr, amount, fee, gasLimit] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'state.Undelegate', params: [valAddr, amount, fee, gasLimit] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

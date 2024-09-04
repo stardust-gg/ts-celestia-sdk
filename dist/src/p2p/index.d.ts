@@ -1,7 +1,7 @@
-import { Client } from "..";
-import { metrics } from "../types/metrics";
-import { network } from "../types/network";
-import { peer } from "../types/peer";
+import Client from '..';
+import { metrics } from '../types/metrics';
+import { network } from '../types/network';
+import { peer } from '../types/peer';
 export declare class P2P {
     client: Client;
     constructor(client: Client);

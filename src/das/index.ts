@@ -1,7 +1,6 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { das } from "../types/das";
-
+import Client from '..';
+import { Payload } from '../constants';
+import { das } from '../types/das';
 
 export class Das {
     client: Client;
@@ -13,7 +12,7 @@ export class Das {
     async SamplingStats(): Promise<das.SamplingStats> {
         const jsonRequest: any = {
             ...Payload,
-            method: "das.SamplingStats",
+            method: 'das.SamplingStats',
             params: [],
         };
 
@@ -24,7 +23,7 @@ export class Das {
     async WaitCatchUp(): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "das.WaitCatchUp",
+            method: 'das.WaitCatchUp',
             params: [],
         };
 

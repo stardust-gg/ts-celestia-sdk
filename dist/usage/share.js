@@ -8,12 +8,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const src_1 = require("../src");
+const src_1 = __importDefault(require("../src"));
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        let adminAuthTokenMainnet = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4";
-        let node = new src_1.Client("http://localhost:26658", adminAuthTokenMainnet);
+        let adminAuthTokenMainnet = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4';
+        let node = new src_1.default('http://localhost:26658', adminAuthTokenMainnet);
         let header = yield node.Header.GetByHeight(1454409);
         console.log(header);
     });

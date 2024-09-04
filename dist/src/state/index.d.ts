@@ -1,6 +1,6 @@
-import { Client } from "..";
-import { blob } from "../types/blob";
-import { state } from "../types/state";
+import Client from '..';
+import { blob } from '../types/blob';
+import { state } from '../types/state';
 export declare class State {
     client: Client;
     constructor(client: Client);

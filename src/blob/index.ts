@@ -1,7 +1,7 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { blob } from "../types/blob";
-import { share } from "../types/share";
+import Client from '..';
+import { Payload } from '../constants';
+import { blob } from '../types/blob';
+import { share } from '../types/share';
 
 export class Blob {
     client: Client;
@@ -20,11 +20,11 @@ export class Blob {
     async Get(
         height: number,
         namespace: share.Namespace,
-        commitment: blob.Commitment
+        commitment: blob.Commitment,
     ): Promise<blob.Blob> {
         const jsonRequest: any = {
             ...Payload,
-            method: "blob.Get",
+            method: 'blob.Get',
             params: [height, namespace, commitment],
         };
 
@@ -40,11 +40,11 @@ export class Blob {
      */
     async GetAll(
         height: number,
-        namespace: share.Namespace[]
+        namespace: share.Namespace[],
     ): Promise<blob.Blob[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "blob.GetAll",
+            method: 'blob.GetAll',
             params: [height, namespace],
         };
 
@@ -62,11 +62,11 @@ export class Blob {
     async GetProof(
         height: number,
         namespace: share.Namespace,
-        commitment: blob.Commitment
+        commitment: blob.Commitment,
     ): Promise<blob.Proof> {
         const jsonRequest: any = {
             ...Payload,
-            method: "blob.GetProof",
+            method: 'blob.GetProof',
             params: [height, namespace, commitment],
         };
 
@@ -86,11 +86,11 @@ export class Blob {
         height: number,
         namespace: share.Namespace,
         proof: blob.Proof,
-        commitment: blob.Commitment
+        commitment: blob.Commitment,
     ): Promise<blob.Proof> {
         const jsonRequest: any = {
             ...Payload,
-            method: "blob.Included",
+            method: 'blob.Included',
             params: [height, namespace, proof, commitment],
         };
 
@@ -106,11 +106,11 @@ export class Blob {
      */
     async Submit(
         blobs: blob.Blob[],
-        gasPrice: blob.GasPrice
+        gasPrice: blob.GasPrice,
     ): Promise<blob.Proof> {
         const jsonRequest: any = {
             ...Payload,
-            method: "blob.Included",
+            method: 'blob.Included',
             params: [blobs, gasPrice],
         };
 

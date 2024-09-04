@@ -17,7 +17,7 @@ class Fraud {
     }
     Get(proofType) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "fraud.Get", params: [proofType] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'fraud.Get', params: [proofType] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

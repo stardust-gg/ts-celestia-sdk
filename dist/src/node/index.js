@@ -17,35 +17,35 @@ class Node {
     }
     AuthNew(perms) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "node.AuthNew", params: [perms] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'node.AuthNew', params: [perms] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     AuthVerify(perms) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "node.AuthVerify", params: [perms] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'node.AuthVerify', params: [perms] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Info() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "node.Info", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'node.Info', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     LogLevelSet(name, level) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "node.LogLevelSet", params: [name, level] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'node.LogLevelSet', params: [name, level] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     Ready() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "node.Ready", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'node.Ready', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

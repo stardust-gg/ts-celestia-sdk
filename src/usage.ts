@@ -1,10 +1,11 @@
-import { Client } from "./index";
+import Client from './index';
 
 async function main() {
     let authTokenMainnet =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIl19.ER8p9mNj6JDR4bqKJkUVUvVEqzsVLBULqgEcRnqyD4U";
-    let adminAuthTokenMainnet = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4"
-    let node = new Client("http://localhost:26658", authTokenMainnet);
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIl19.ER8p9mNj6JDR4bqKJkUVUvVEqzsVLBULqgEcRnqyD4U';
+    let adminAuthTokenMainnet =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4';
+    let node = new Client('http://localhost:26658', authTokenMainnet);
 
     // let GetResult = await node.Blob.Get(
     //     42,
@@ -51,7 +52,7 @@ async function main() {
 
     // console.log(WaitCatchUpResult)
 
-    let FraudGetResult = await node.Fraud.Get("badencodingv0.1");
+    let FraudGetResult = await node.Fraud.Get('badencodingv0.1');
 
     console.log(FraudGetResult);
 

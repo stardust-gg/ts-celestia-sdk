@@ -1,5 +1,5 @@
-import { Client } from "..";
-import { Payload } from "../constants";
+import Client from '..';
+import { Payload } from '../constants';
 
 interface Info {
     type: string;
@@ -16,7 +16,7 @@ export class Node {
     async AuthNew(perms: string[]): Promise<string> {
         const jsonRequest: any = {
             ...Payload,
-            method: "node.AuthNew",
+            method: 'node.AuthNew',
             params: [perms],
         };
 
@@ -27,7 +27,7 @@ export class Node {
     async AuthVerify(perms: string): Promise<string> {
         const jsonRequest: any = {
             ...Payload,
-            method: "node.AuthVerify",
+            method: 'node.AuthVerify',
             params: [perms],
         };
 
@@ -38,7 +38,7 @@ export class Node {
     async Info(): Promise<Info> {
         const jsonRequest: any = {
             ...Payload,
-            method: "node.Info",
+            method: 'node.Info',
             params: [],
         };
 
@@ -49,7 +49,7 @@ export class Node {
     async LogLevelSet(name: string, level: string): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "node.LogLevelSet",
+            method: 'node.LogLevelSet',
             params: [name, level],
         };
 
@@ -60,7 +60,7 @@ export class Node {
     async Ready(): Promise<boolean> {
         const jsonRequest: any = {
             ...Payload,
-            method: "node.Ready",
+            method: 'node.Ready',
             params: [],
         };
 

@@ -24,7 +24,7 @@ class Blob {
      */
     Get(height, namespace, commitment) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "blob.Get", params: [height, namespace, commitment] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'blob.Get', params: [height, namespace, commitment] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -37,7 +37,7 @@ class Blob {
      */
     GetAll(height, namespace) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "blob.GetAll", params: [height, namespace] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'blob.GetAll', params: [height, namespace] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -51,7 +51,7 @@ class Blob {
      */
     GetProof(height, namespace, commitment) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "blob.GetProof", params: [height, namespace, commitment] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'blob.GetProof', params: [height, namespace, commitment] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -66,7 +66,7 @@ class Blob {
      */
     Included(height, namespace, proof, commitment) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "blob.Included", params: [height, namespace, proof, commitment] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'blob.Included', params: [height, namespace, proof, commitment] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -79,7 +79,7 @@ class Blob {
      */
     Submit(blobs, gasPrice) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "blob.Included", params: [blobs, gasPrice] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'blob.Included', params: [blobs, gasPrice] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

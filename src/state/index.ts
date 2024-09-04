@@ -1,7 +1,7 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { blob } from "../types/blob";
-import { state } from "../types/state";
+import Client from '..';
+import { Payload } from '../constants';
+import { blob } from '../types/blob';
+import { state } from '../types/state';
 
 export class State {
     client: Client;
@@ -13,7 +13,7 @@ export class State {
     async AccountAddress(): Promise<state.Address> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.AccountAddress",
+            method: 'state.AccountAddress',
             params: [],
         };
 
@@ -24,7 +24,7 @@ export class State {
     async Balance(): Promise<state.Balance> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.Balance",
+            method: 'state.Balance',
             params: [],
         };
 
@@ -35,7 +35,7 @@ export class State {
     async BalanceForAddress(): Promise<state.Balance> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.BalanceForAddress",
+            method: 'state.BalanceForAddress',
             params: [],
         };
 
@@ -49,11 +49,11 @@ export class State {
         dstValAddr: state.Address,
         amount: state.Int,
         fee: state.Int,
-        gasLimit: number
+        gasLimit: number,
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.BeginRedelegate",
+            method: 'state.BeginRedelegate',
             params: [srcValAddr, dstValAddr, amount, fee, gasLimit],
         };
 
@@ -66,11 +66,11 @@ export class State {
         amount: state.Int,
         height: state.Int,
         fee: state.Int,
-        gasLimit: number
+        gasLimit: number,
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.CancelUnbondingDelegation",
+            method: 'state.CancelUnbondingDelegation',
             params: [valAddr, amount, height, fee, gasLimit],
         };
 
@@ -82,11 +82,11 @@ export class State {
         valAddr: state.Address,
         amount: state.Int,
         fee: state.Int,
-        gasLimit: number
+        gasLimit: number,
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.Delegate",
+            method: 'state.Delegate',
             params: [valAddr, amount, fee, gasLimit],
         };
 
@@ -95,11 +95,11 @@ export class State {
     }
 
     async QueryDelegation(
-        valAddr: state.Address
+        valAddr: state.Address,
     ): Promise<state.DelegationResponse> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.QueryDelegation",
+            method: 'state.QueryDelegation',
             params: [valAddr],
         };
 
@@ -109,11 +109,11 @@ export class State {
 
     async QueryRedelegations(
         srcValAddr: state.Address,
-        dstValAddr: state.Address
+        dstValAddr: state.Address,
     ): Promise<state.RedelegationResponses> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.QueryRedelegations",
+            method: 'state.QueryRedelegations',
             params: [srcValAddr, dstValAddr],
         };
 
@@ -125,7 +125,7 @@ export class State {
     async QueryUnbonding(valAddr: state.Address): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.QueryUnbonding",
+            method: 'state.QueryUnbonding',
             params: [valAddr],
         };
 
@@ -136,11 +136,11 @@ export class State {
     async SubmitPayForBlob(
         fee: state.Int,
         gasLimit: number,
-        blobs: blob.Blob[]
+        blobs: blob.Blob[],
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.SubmitPayForBlob",
+            method: 'state.SubmitPayForBlob',
             params: [fee, gasLimit, blobs],
         };
 
@@ -151,7 +151,7 @@ export class State {
     async SubmitTx(tx: state.Tx): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.SubmitTx",
+            method: 'state.SubmitTx',
             params: [tx],
         };
 
@@ -163,11 +163,11 @@ export class State {
         to: state.Address,
         amount: state.Int,
         fee: state.Int,
-        gasLimit: number
+        gasLimit: number,
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.Transfer",
+            method: 'state.Transfer',
             params: [to, amount, fee, gasLimit],
         };
 
@@ -179,11 +179,11 @@ export class State {
         valAddr: state.Address,
         amount: state.Int,
         fee: state.Int,
-        gasLimit: number
+        gasLimit: number,
     ): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "state.Undelegate",
+            method: 'state.Undelegate',
             params: [valAddr, amount, fee, gasLimit],
         };
 

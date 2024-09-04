@@ -1,6 +1,6 @@
-import { Client } from "..";
-import { header } from "../types/header";
-import { share } from "../types/share";
+import Client from '..';
+import { header } from '../types/header';
+import { share } from '../types/share';
 export declare class Share {
     client: Client;
     constructor(client: Client);

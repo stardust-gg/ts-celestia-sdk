@@ -1,26 +1,37 @@
 {
-    "name": "cntsc",
-    "version": "0.0.1",
+    "name": "ts-celestia-sdk",
+    "version": "1.0.0",
     "description": "Celestia Node TypeScript SDK",
     "main": "dist/src/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ashishbhintade/cntsc.git"
+        "url": "https://github.com/stardust-gg/ts-celestia-sdk"
     },
-    "keywords": [
-        "celestia",
-        "typescript",
-        "celestia client",
-        "blockchain"
-    ],
-    "author": "Ashish Bhintade",
+    "author": "", 
     "license": "MIT",
     "devDependencies": {
+        "ts-node": "^10.9.1",
         "typedoc": "^0.25.13",
-        "typescript": "^5.4.5"
+        "typescript": "5.2.2"
     },
     "scripts": {
         "build": "rm -rf ./dist && npx tsc",
         "docs": "npx typedoc --entryPointStrategy expand ./src"
-    }
+    },
+    "engines": {
+        "node": ">=18",
+        "npm": "please-use-yarn",
+        "yarn": "1"
+    },
+    "dependencies": {
+        "axios": "1.7.7"
+    },
+    "keywords": [
+        "celestia",
+        "node",
+        "typescript",
+        "sdk",
+        "client",
+        "blockchain"
+    ]
 }

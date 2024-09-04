@@ -1,5 +1,5 @@
-import { Client } from "..";
-import { das } from "../types/das";
+import Client from '..';
+import { das } from '../types/das';
 export declare class Das {
     client: Client;
     constructor(client: Client);

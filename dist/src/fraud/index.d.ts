@@ -1,5 +1,5 @@
-import { Client } from "..";
-import { fraud } from "../types/fraud";
+import Client from '..';
+import { fraud } from '../types/fraud';
 export declare class Fraud {
     client: Client;
     constructor(client: Client);

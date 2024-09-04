@@ -18,28 +18,28 @@ class Share {
     // TODO implement the type for returned value
     GetEDS(header) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "share.GetEDS", params: [header] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'share.GetEDS', params: [header] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     GetShare(header, row, col) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "share.GetShare", params: [header, row, col] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'share.GetShare', params: [header, row, col] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     GetSharesByNamespace(header, namespace) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "share.GetSharesByNamespace", params: [header, namespace] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'share.GetSharesByNamespace', params: [header, namespace] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     SharesAvailable(header) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "share.SharesAvailable", params: [header] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'share.SharesAvailable', params: [header] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

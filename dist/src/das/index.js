@@ -17,14 +17,14 @@ class Das {
     }
     SamplingStats() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "das.SamplingStats", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'das.SamplingStats', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     WaitCatchUp() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "das.WaitCatchUp", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'das.WaitCatchUp', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

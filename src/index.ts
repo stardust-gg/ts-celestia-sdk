@@ -1,29 +1,36 @@
-import { Blob } from "./blob";
-import { Das } from "./das";
-import { Fraud } from "./fraud";
-import { Header } from "./header";
-import { Node } from "./node";
-import { P2P } from "./p2p";
-import { Share } from "./share";
-import { State } from "./state";
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import { Blob } from './blob';
+import { Das } from './das';
+import { Fraud } from './fraud';
+import { Header } from './header';
+import { Node } from './node';
+import { P2P } from './p2p';
+import { Share } from './share';
+import { State } from './state';
 
-export class Client {
-    url: string;
-    apiKey: string;
-    log: boolean;
-    Blob: Blob;
-    Das: Das;
-    Fraud: Fraud;
-    Header: Header;
-    Node: Node;
-    P2P: P2P;
-    Share: Share;
-    State: State;
+interface ClientResponse<T> {
+    result: T;
+    error?: {
+        message: string;
+    };
+}
 
-    constructor(url: string, apiKey: string, log: boolean = false) {
+export default class Client {
+    public url: string;
+    public apiKey: string;
+
+    public Blob: Blob;
+    public Das: Das;
+    public Fraud: Fraud;
+    public Header: Header;
+    public Node: Node;
+    public P2P: P2P;
+    public Share: Share;
+    public State: State;
+
+    constructor(url: string, apiKey: string) {
         this.url = url;
         this.apiKey = apiKey;
-        this.log = log;
 
         this.Blob = new Blob(this);
         this.Das = new Das(this);
@@ -35,34 +42,40 @@ export class Client {
         this.State = new State(this);
     }
 
-    async request(payload: any): Promise<any> {
-        const headers: HeadersInit = {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${this.apiKey}`,
+    async request<T>(payload: object): Promise<T> {
+        const config: AxiosRequestConfig = {
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${this.apiKey}`,
+            },
         };
 
         try {
-            const response = await fetch(this.url, {
-                method: "POST",
-                headers,
-                body: JSON.stringify(payload),
-            });
+            const response: AxiosResponse<ClientResponse<T>> = await axios.post(
+                this.url,
+                payload,
+                config,
+            );
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+            if (response.data.error) {
+                throw new Error(`${response.data.error.message}`);
             }
 
-            const jsonResponse = await response.json();
-
-            if (jsonResponse.error) {
-                throw new Error(`${jsonResponse.error.message}`);
-            }
-
-            // Handle the JSON-RPC response
-            return jsonResponse.result;
+            return response.data.result;
         } catch (error) {
-            // Handle any errors that occurred during the fetch
-            throw new Error(`Error during fetch: ${error}`);
+            if (axios.isAxiosError(error) && error.response) {
+                throw new Error(
+                    `HTTP error! Status: ${error.response.status} - ${error.response.statusText}`,
+                );
+            } else if (axios.isAxiosError(error) && error.request) {
+                throw new Error('No response received from the server.');
+            } else {
+                throw new Error(
+                    `Request failed: ${
+                        error instanceof Error ? error.message : 'Unknown error'
+                    }`,
+                );
+            }
         }
     }
 }

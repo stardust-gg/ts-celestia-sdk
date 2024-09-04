@@ -8,13 +8,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_1 = require("./index");
+const index_1 = __importDefault(require("./index"));
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        let authTokenMainnet = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIl19.ER8p9mNj6JDR4bqKJkUVUvVEqzsVLBULqgEcRnqyD4U";
-        let adminAuthTokenMainnet = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4";
-        let node = new index_1.Client("http://localhost:26658", authTokenMainnet);
+        let authTokenMainnet = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIl19.ER8p9mNj6JDR4bqKJkUVUvVEqzsVLBULqgEcRnqyD4U';
+        let adminAuthTokenMainnet = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJwdWJsaWMiLCJyZWFkIiwid3JpdGUiLCJhZG1pbiJdfQ.Dlz5O9fOwNEeWNtgumqwKtQVILwfveya0dE7Y5zWPE4';
+        let node = new index_1.default('http://localhost:26658', authTokenMainnet);
         // let GetResult = await node.Blob.Get(
         //     42,
         //     "AAAAAAAAAAAAAAAAAAAAAAAAAAECAwQFBgcICRA=",
@@ -48,7 +51,7 @@ function main() {
         // console.log(SamplingStatsResult)
         // let WaitCatchUpResult = await node.Das.WaitCatchUp();
         // console.log(WaitCatchUpResult)
-        let FraudGetResult = yield node.Fraud.Get("badencodingv0.1");
+        let FraudGetResult = yield node.Fraud.Get('badencodingv0.1');
         console.log(FraudGetResult);
         // // let newToken = await node.Node.AuthNew(["admin"]);
         // let newTokenPerms = await node.Node.AuthVerify(authTokenMainnet);

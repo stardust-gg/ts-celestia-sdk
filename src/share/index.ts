@@ -1,7 +1,7 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { header } from "../types/header";
-import { share } from "../types/share";
+import Client from '..';
+import { Payload } from '../constants';
+import { header } from '../types/header';
+import { share } from '../types/share';
 
 export class Share {
     client: Client;
@@ -14,7 +14,7 @@ export class Share {
     async GetEDS(header: header.ExtendedHeader): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "share.GetEDS",
+            method: 'share.GetEDS',
             params: [header],
         };
 
@@ -25,11 +25,11 @@ export class Share {
     async GetShare(
         header: header.ExtendedHeader,
         row: number,
-        col: number
+        col: number,
     ): Promise<share.Share> {
         const jsonRequest: any = {
             ...Payload,
-            method: "share.GetShare",
+            method: 'share.GetShare',
             params: [header, row, col],
         };
 
@@ -39,11 +39,11 @@ export class Share {
 
     async GetSharesByNamespace(
         header: header.ExtendedHeader,
-        namespace: share.Namespace
+        namespace: share.Namespace,
     ): Promise<share.NamespacedShare[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "share.GetSharesByNamespace",
+            method: 'share.GetSharesByNamespace',
             params: [header, namespace],
         };
 
@@ -54,7 +54,7 @@ export class Share {
     async SharesAvailable(header: header.ExtendedHeader): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "share.SharesAvailable",
+            method: 'share.SharesAvailable',
             params: [header],
         };
 

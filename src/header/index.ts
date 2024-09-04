@@ -1,18 +1,18 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { header } from "../types/header";
+import Client from '..';
+import { Payload } from '../constants';
+import { header } from '../types/header';
 
 export class Header {
-    client: Client
+    client: Client;
 
     constructor(client: Client) {
-        this.client = client
+        this.client = client;
     }
 
     async GetByHash(hash: string): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.GetByHash",
+            method: 'header.GetByHash',
             params: [hash],
         };
 
@@ -23,7 +23,7 @@ export class Header {
     async GetByHeight(height: number): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.GetByHeight",
+            method: 'header.GetByHeight',
             params: [height],
         };
 
@@ -31,10 +31,13 @@ export class Header {
         return await this.client.request(jsonRequest);
     }
 
-    async GetRangeByHeight(from: header.ExtendedHeader, to: number): Promise<header.ExtendedHeader> {
+    async GetRangeByHeight(
+        from: header.ExtendedHeader,
+        to: number,
+    ): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.GetRangeByHeight",
+            method: 'header.GetRangeByHeight',
             params: [from, to],
         };
 
@@ -45,7 +48,7 @@ export class Header {
     async LocalHead(): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.LocalHead",
+            method: 'header.LocalHead',
             params: [],
         };
 
@@ -56,7 +59,7 @@ export class Header {
     async NetworkHead(): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.NetworkHead",
+            method: 'header.NetworkHead',
             params: [],
         };
 
@@ -69,7 +72,7 @@ export class Header {
     async SyncState(): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.SyncState",
+            method: 'header.SyncState',
             params: [],
         };
 
@@ -80,7 +83,7 @@ export class Header {
     async SyncWait(): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.SyncWait",
+            method: 'header.SyncWait',
             params: [],
         };
 
@@ -91,7 +94,7 @@ export class Header {
     async WaitForHeight(height: number): Promise<header.ExtendedHeader> {
         const jsonRequest: any = {
             ...Payload,
-            method: "header.WaitForHeight",
+            method: 'header.WaitForHeight',
             params: [height],
         };
 

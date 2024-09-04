@@ -17,35 +17,35 @@ class Header {
     }
     GetByHash(hash) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.GetByHash", params: [hash] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.GetByHash', params: [hash] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     GetByHeight(height) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.GetByHeight", params: [height] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.GetByHeight', params: [height] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     GetRangeByHeight(from, to) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.GetRangeByHeight", params: [from, to] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.GetRangeByHeight', params: [from, to] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     LocalHead() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.LocalHead", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.LocalHead', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     NetworkHead() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.NetworkHead", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.NetworkHead', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
@@ -53,21 +53,21 @@ class Header {
     // TODO implement Subscribe
     SyncState() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.SyncState", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.SyncState', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     SyncWait() {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.SyncWait", params: [] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.SyncWait', params: [] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });
     }
     WaitForHeight(height) {
         return __awaiter(this, void 0, void 0, function* () {
-            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: "header.WaitForHeight", params: [height] });
+            const jsonRequest = Object.assign(Object.assign({}, constants_1.Payload), { method: 'header.WaitForHeight', params: [height] });
             // Send the fetch request
             return yield this.client.request(jsonRequest);
         });

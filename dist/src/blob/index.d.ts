@@ -1,6 +1,6 @@
-import { Client } from "..";
-import { blob } from "../types/blob";
-import { share } from "../types/share";
+import Client from '..';
+import { blob } from '../types/blob';
+import { share } from '../types/share';
 export declare class Blob {
     client: Client;
     constructor(client: Client);

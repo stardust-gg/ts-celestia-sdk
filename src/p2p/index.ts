@@ -1,8 +1,8 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { metrics } from "../types/metrics";
-import { network } from "../types/network";
-import { peer } from "../types/peer";
+import Client from '..';
+import { Payload } from '../constants';
+import { metrics } from '../types/metrics';
+import { network } from '../types/network';
+import { peer } from '../types/peer';
 
 export class P2P {
     client: Client;
@@ -14,29 +14,29 @@ export class P2P {
     async BandwidthForPeer(id: string): Promise<metrics.Stats> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.BandwidthForPeer",
+            method: 'p2p.BandwidthForPeer',
             params: [id],
         };
 
         // Send the fetch request
         return await this.client.request(jsonRequest);
     }
-    
+
     async BandwidthForProtocol(protocol: string): Promise<metrics.Stats> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.BandwidthForProtocol",
+            method: 'p2p.BandwidthForProtocol',
             params: [protocol],
         };
 
         // Send the fetch request
         return await this.client.request(jsonRequest);
     }
-    
+
     async BandwidthStats(): Promise<metrics.Stats> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.BandwidthStats",
+            method: 'p2p.BandwidthStats',
             params: [],
         };
 
@@ -47,7 +47,7 @@ export class P2P {
     async BlockPeer(peer: string): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.BlockPeer",
+            method: 'p2p.BlockPeer',
             params: [peer],
         };
 
@@ -58,7 +58,7 @@ export class P2P {
     async ClosePeer(peer: string): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.ClosePeer",
+            method: 'p2p.ClosePeer',
             params: [peer],
         };
 
@@ -69,7 +69,7 @@ export class P2P {
     async Connect(peer: peer.AddrInfo): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Connect",
+            method: 'p2p.Connect',
             params: [peer],
         };
 
@@ -80,7 +80,7 @@ export class P2P {
     async Connectedness(peer: peer.ID): Promise<network.Connectedness> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Connectedness",
+            method: 'p2p.Connectedness',
             params: [peer],
         };
 
@@ -91,7 +91,7 @@ export class P2P {
     async Info(): Promise<peer.AddrInfo> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Info",
+            method: 'p2p.Info',
             params: [],
         };
 
@@ -102,7 +102,7 @@ export class P2P {
     async IsProtected(peer: peer.ID, tag: string): Promise<boolean> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.IsProtected",
+            method: 'p2p.IsProtected',
             params: [peer, tag],
         };
 
@@ -113,7 +113,7 @@ export class P2P {
     async ListBlockedPeers(): Promise<peer.ID[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.ListBlockedPeers",
+            method: 'p2p.ListBlockedPeers',
             params: [],
         };
 
@@ -124,7 +124,7 @@ export class P2P {
     async NATStatus(): Promise<network.Reachability> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.NATStatus",
+            method: 'p2p.NATStatus',
             params: [],
         };
 
@@ -135,7 +135,7 @@ export class P2P {
     async PeerInfo(peer: peer.ID): Promise<peer.AddrInfo> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.PeerInfo",
+            method: 'p2p.PeerInfo',
             params: [peer],
         };
 
@@ -146,7 +146,7 @@ export class P2P {
     async Peers(): Promise<peer.ID[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Peers",
+            method: 'p2p.Peers',
             params: [],
         };
 
@@ -157,7 +157,7 @@ export class P2P {
     async Protect(peer: peer.ID, tag: string): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Protect",
+            method: 'p2p.Protect',
             params: [peer, tag],
         };
 
@@ -168,7 +168,7 @@ export class P2P {
     async PubSubPeers(topic: string): Promise<peer.ID[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.PubSubPeers",
+            method: 'p2p.PubSubPeers',
             params: [topic],
         };
 
@@ -180,7 +180,7 @@ export class P2P {
     async ResourceState(): Promise<any> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.ResourceState",
+            method: 'p2p.ResourceState',
             params: [],
         };
 
@@ -191,7 +191,7 @@ export class P2P {
     async UnblockPeer(peer: peer.ID): Promise<undefined> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.UnblockPeer",
+            method: 'p2p.UnblockPeer',
             params: [peer],
         };
 
@@ -202,7 +202,7 @@ export class P2P {
     async Unprotect(peer: peer.ID, tag: string): Promise<boolean> {
         const jsonRequest: any = {
             ...Payload,
-            method: "p2p.Unprotect",
+            method: 'p2p.Unprotect',
             params: [peer, tag],
         };
 

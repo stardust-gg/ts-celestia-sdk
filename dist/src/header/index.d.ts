@@ -1,5 +1,5 @@
-import { Client } from "..";
-import { header } from "../types/header";
+import Client from '..';
+import { header } from '../types/header';
 export declare class Header {
     client: Client;
     constructor(client: Client);

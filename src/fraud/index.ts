@@ -1,6 +1,6 @@
-import { Client } from "..";
-import { Payload } from "../constants";
-import { fraud } from "../types/fraud";
+import Client from '..';
+import { Payload } from '../constants';
+import { fraud } from '../types/fraud';
 
 export class Fraud {
     client: Client;
@@ -12,7 +12,7 @@ export class Fraud {
     async Get(proofType: fraud.ProofType): Promise<fraud.Proof[]> {
         const jsonRequest: any = {
             ...Payload,
-            method: "fraud.Get",
+            method: 'fraud.Get',
             params: [proofType],
         };
 
@@ -20,5 +20,5 @@ export class Fraud {
         return await this.client.request(jsonRequest);
     }
 
-    // TODO implemet Subscribe method 
+    // TODO implemet Subscribe method
 }
